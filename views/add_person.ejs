@@ -1,0 +1,70 @@
+<%- include('layout/header') %>
+
+<div class="text-center py-4">
+    <h1>Add Person Data</h1>
+    <img src="icons/hhh.jpeg" alt="">
+    
+</div>
+
+
+    <form action="/add" method="post" id="add-form" enctype="multipart/form-data">
+       
+    <div class= "container d-flex justify-content-center py-2">
+
+        
+       
+            <div class="row border rounded py-4">
+            <div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Date of Birth</label>
+
+                    <input type="text" class="form-control" id="dob" name="dob" required>
+                    <div id="" class="form-text">dd-mm-yyyy</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Contact Number</label>
+
+                    <input type="text" id="contact" name="contact" class="form-control">
+
+                </div>
+
+                <div class="mb-3">
+                <label for="" class="form-label">Address</label>
+
+                <textarea class="form-control" id="address" rows="3" name="address"></textarea>
+
+            </div>
+
+                <div class="mb-3">
+                    <label for="" class="form-label">Email</label>
+
+                    <input type="email" id="email" name="email" class="form-control">
+
+                </div>
+
+
+
+                <div class="form-group py-4">
+                    <label for="formFileMultiple" class="form-label">Image</label>
+                    <input class="form-control" name="image" type="file" required/>
+                </div>
+
+                <div class="mb-3 form-check d-flex justify-content-center py-4">
+                    <button type="submit" class="btn btn-primary ">Submit</button>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    </form>
+
+    <%- include('layout/footer') %>

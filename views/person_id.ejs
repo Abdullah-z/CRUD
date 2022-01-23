@@ -1,0 +1,39 @@
+<%- include('layout/header') %>
+
+<div class="text-center py-4">
+    <h1>Person Information</h1>
+
+   <!-- <img src="/icons/hhh.jpeg" alt=""> -->
+   
+</div>
+
+
+
+
+
+
+<div class="container py-4 d-flex justify-content-center">
+    <div class="card" style="width: 18rem;">
+        <img src="/<%= user.image %>" class="card-img-top" alt="..."> 
+       
+        <div class="card-body">
+          <h5 class="card-title"><%=user.name %></h5>
+          <p class="card-text"><%= user.address %></p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Date of Birth: <%=user.dob %></li>
+          <li class="list-group-item">Contact Number: <%=user.contact %></li>
+          <li class="list-group-item">Email: <%=user.email %></li>
+          <li class="list-group-item">ID: <%=user._id %></li>
+            
+        </ul>
+
+
+        <!-- <img src="icons/dsf.jpg" alt=""> -->
+</div>
+
+
+
+</div>
+
+<%- include('layout/footer') %>

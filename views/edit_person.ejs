@@ -1,0 +1,72 @@
+<%- include('layout/header') %>
+
+    <div class="text-center py-4">
+        <h1>Edit Data</h1>
+       
+    </div>
+
+
+    <form action="/edit/<%= user._id %>" method="post" id="add-form" enctype="multipart/form-data">
+
+        <div class="container d-flex justify-content-center py-2">
+
+
+
+            <div class="row border rounded py-4">
+                <div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" value="<%= user.name %>" >
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Date of Birth</label>
+
+                        <input type="text" class="form-control" id="dob" name="dob"  value="<%= user.dob %>">
+                        <div id="" class="form-text">dd-mm-yyyy</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="" class="form-label">Contact Number</label>
+
+                        <input type="text" id="contact" name="contact" class="form-control" value="<%= user.contact %>" >
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="" class="form-label">Address</label>
+
+                        <textarea class="form-control" id="address" rows="3" name="address"><%= user.address %></textarea>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="" class="form-label">Email</label>
+
+                        <input type="email" id="email" name="email" value="<%= user.email %>" class="form-control">
+
+                    </div>
+
+
+
+                    <div class="form-group py-4 cen">
+                        <label for="formFileMultiple" class="form-label">Image</label>
+                        <input class="form-control" name="image" type="file"  />
+                        <img src="/<%= user.image %>" width="100" class="img-thumbnail mt-1 text" alt="">
+                    </div>
+                    <input type="hidden" name="old_image" value="<%= user.image %>" id="">
+
+                    <div class="mb-3 form-check d-flex justify-content-center py-4">
+                        <button value="update User" type="submit" class="btn btn-primary ">Submit</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+
+
+    <%- include('layout/footer') %>
